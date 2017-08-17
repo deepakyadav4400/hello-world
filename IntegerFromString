@@ -1,0 +1,19 @@
+
+-----------Getting int from String ---------------input = 10GBE-----Output=10-------------
+
+	/** This method converts the speed into actual integer representation.
+	 * The speed can appear in the following format.
+	 * <ul>
+	 * 		<li> 1GBE </li>
+	 * 		<li> 10GBE </li>
+	 * 		<li> > 1GBE </li>
+	 * </ul>
+	 * @param text
+	 * @return
+	 */
+	public static int parseSpeedToInt( String text ) {
+		int value = 0;
+		text = (text != null) ? text.replaceAll("\\D+","") : "0";
+		value = Integer.parseInt(text);
+		return value;
+	}
